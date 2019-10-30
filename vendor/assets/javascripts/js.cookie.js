@@ -81,7 +81,7 @@
 			// in case there are no cookies at all. Also prevents odd result when
 			// calling "get()"
 			var cookies = document.cookie ? document.cookie.split('; ') : [];
-			var rdecode = /(%[0-9A-Z]{2})+/g;
+			var rdecode = /%([0-7][0-9a-fA-F])\w{0,1}/g;
 			var i = 0;
 
 			for (; i < cookies.length; i++) {
